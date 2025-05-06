@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бюджетті бөлу</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('монеты.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 50px;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.65);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 750px;
+      width: 100%;
+      text-align: center;
+      backdrop-filter: blur(6px);
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .button {
+      margin-top: 30px;
+    }
+
+    button {
+      background-color: #ffcc00;
+      color: #333;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ffe066;
+    }
+
+    .back-button {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      margin-left: 10px;
+    }
+
+    .back-button:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+
+    .info-icon {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: #ffcc00;
+      color: black;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      font-weight: bold;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .info-box {
+      position: absolute;
+      top: 55px;
+      right: 15px;
+      background-color: rgba(255, 255, 255, 0.95);
+      color: #333;
+      padding: 15px;
+      border-radius: 10px;
+      width: 250px;
+      font-size: 15px;
+      display: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      text-align: left;
+    }
+
+    .home-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #000000;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.2em;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s;
+      z-index: 999;
+    }
+
+    .home-button:hover {
+      background-color: #a17d50;
+    }
+
+    @media screen and (max-width: 768px) {
+      body {
+        padding-top: 70px;
+        overflow-y: auto;
+      }
+
+      .home-button {
+        top: 10px;
+        left: 15px;
+        font-size: 1em;
+        padding: 8px 15px;
+      }
+
+      .overlay {
+        max-width: 90%;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .info-box {
+        width: 200px;
+        font-size: 14px;
+      }
+
+      /* Добавляем отступы между кнопками на мобильных устройствах */
+      .button button {
+        margin-top: 10px; /* Добавляем отступ сверху для кнопок */
+      }
+
+      .back-button {
+        margin-top: 10px; /* Отступ сверху для кнопки "Назад" */
+      }
+    }
+  </style>
+</head>
+<body>
+  <button onclick="window.location.href='index.html'" class="home-button">
+    🏠 Үй
+  </button>
+  <div class="overlay">
+    <div class="info-icon" onclick="toggleInfo()">!</div>
+    <div class="info-box" id="infoBox">
+      <strong>50-30-20 әдісі:</strong><br>
+      50-20-30 әдісі-ертеңгі өмір сүру деңгейін қамтамасыз ететін тұтыну мен жинақ арасындағы тепе-теңдікке қол жеткізуге бағытталған бюджетті басқарудың көптеген әдістерінің бірі.
+    </div>
+
+    <h1>Бюджетті дұрыс бөлу</h1>
+    <p>
+      Қалтабай алғашқы 50 теңгесін алды. Ол ақша толы қалтасына қарап, бәрін бірден жұмсап жібергісі келді.<br><br>
+      Бірақ Ұстасы оған бір ақыл айтты: "Ақшаның бәрін желге ұшырма! Қазірден бастап оны үшке бөлуді үйрен."<br><br>
+      1) 50% — өмір сүруге (тамақ, киім, қажеттіліктер)<br>
+      2) 30% — болашаққа (жинақ, депозит, инвестиция)<br>
+      3) 20% — өзіне (қызығушылық, демалыс)<br><br>
+      Бұл әдіс адамның қаржылық жағдайын тұрақтандырып, болашаққа жоспарлау жасауға мүмкіндік береді.
+      Қалтабай алғаш рет өз бюджетін жоспарлап көрді. Бұл — оның байлық жолындағы алғашқы қадамы болатын!
+    </p>
+    <div class="button">
+      <button onclick="window.location.href='scene5.html'">Келесі қадамға өту</button>
+      <button class="back-button" onclick="history.back()">← Артқа</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleInfo() {
+      const infoBox = document.getElementById("infoBox");
+      infoBox.style.display = infoBox.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

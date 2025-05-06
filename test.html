@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Қалтабайдың тесті</title>
+  <style>
+    body {
+      background: url('test.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.65);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 800px;
+      width: 90%;
+      text-align: center;
+      backdrop-filter: blur(6px);
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .question {
+      margin-bottom: 20px;
+      font-size: 18px;
+      text-align: left;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .button {
+      margin-top: 20px;
+    }
+
+    button {
+      background-color: #ffcc00;
+      color: #333;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ffe066;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+
+    #result-section {
+      display: none;
+      margin-top: 30px;
+    }
+
+    /* Мобильная адаптация */
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+        height: auto;
+        align-items: flex-start;
+      }
+
+      .overlay {
+        padding: 20px;
+        border-radius: 15px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      p, .question {
+        font-size: 16px;
+      }
+
+      button {
+        padding: 10px 18px;
+        font-size: 14px;
+      }
+
+      #result {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Соңғы қадам: Тест</h1>
+    <p>Қалтабай сізге арнайы тест дайындады. Бұл оның білімімен бөлісу жолы.<br>
+    Егер сіз дұрыс жауап берсеңіз — қаржылық сауатты адам екеніңіз дәлелденеді.</p>
+
+    <form id="quiz">
+      <div class="question">
+        1. Ақшаны дұрыс басқару үшін не маңызды?
+        <br>
+        <label><input type="radio" name="q1" value="a"> Барлығын тез жұмсау</label><br>
+        <label><input type="radio" name="q1" value="b"> Жоспар құру және бөлу</label><br>
+        <label><input type="radio" name="q1" value="c"> Тек достармен бөлісу</label>
+      </div>
+
+      <div class="question">
+        2. 50-30-20 ережесі нені білдіреді?
+        <br>
+        <label><input type="radio" name="q2" value="a"> Бәрін депозитке салу</label><br>
+        <label><input type="radio" name="q2" value="b"> 50% өмірге, 30% жинақ, 20% өзіне</label><br>
+        <label><input type="radio" name="q2" value="c"> Күнделікті шығындар 100%</label>
+      </div>
+
+      <div class="button">
+        <button type="button" onclick="checkAnswers()">Тексеру</button>
+      </div>
+    </form>
+
+    <div id="result"></div>
+
+    <div id="result-section">
+      <button onclick="window.location.href='kaltabai_today.html'">Қалтабайдың ұрпақтары →</button>
+    </div>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      const quiz = document.forms["quiz"];
+      const answer1 = quiz["q1"].value;
+      const answer2 = quiz["q2"].value;
+      const result = document.getElementById("result");
+      const resultSection = document.getElementById("result-section");
+
+      if (answer1 === "b" && answer2 === "b") {
+        result.innerHTML = "✅ Жарайсың! Сен қаржылық сауаттысың!";
+        resultSection.style.display = "block";
+      } else {
+        result.innerHTML = "❌ Қайта көріп шық, тағы да тырыс!";
+        resultSection.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>

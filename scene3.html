@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ұста болу</title>
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  background: url('кузница.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+}
+  
+    h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+  
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  
+    .button {
+      margin-top: 30px;
+    }
+  
+    button {
+      background-color: #ffcc00;
+      color: #333;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+  
+    button:hover {
+      background-color: #ffe066;
+    }
+  
+    .back-button {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      margin-left: 10px;
+    }
+  
+    .back-button:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+  
+    .info-icon {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: #ffcc00;
+      color: black;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      font-weight: bold;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  
+    .info-box {
+      position: absolute;
+      top: 55px;
+      right: 15px;
+      background-color: rgba(255, 255, 255, 0.95);
+      color: #333;
+      padding: 15px;
+      border-radius: 10px;
+      width: 250px;
+      font-size: 15px;
+      display: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      text-align: left;
+    }
+  
+    .home-button {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background-color: #000000;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s;
+      z-index: 999;
+    }
+  
+    .home-button:hover {
+      background-color: #a17d50;
+    }
+  
+    @media (max-width: 600px) {
+      .home-button {
+        top: auto;
+        bottom: 10px;
+      }
+      .button button {
+        margin-top: 10px; /* Добавляем отступ сверху для кнопок */
+      }
+
+      .back-button {
+        margin-top: 10px; /* Отступ сверху для кнопки "Назад" */
+      }
+    }
+  </style>
+  
+</head>
+<body>
+  <button onclick="window.location.href='index.html'" class="home-button">
+    🏠 Үй
+  </button>
+  <div class="overlay">
+    <div class="info-icon" onclick="toggleInfo()">!</div>
+    <div class="info-box" id="infoBox">
+      Дұрыс ақша көзің табу өте маңызды, шеберлігің артқан сайын табысында артады.
+    </div>
+
+    <h1>Ұста болу</h1>
+    <p>
+      Қалтабай ұста болып жұмыс істеуге шешім қабылдады. Ол 20 теңге беріп ұстаның шәкірті болды.<br><br>
+      Бірнеше айлар бойы Қалтабай темір соғу, балғамен жұмыс істеу, темірді қақтау әдістерін үйренді.<br><br>
+      Тамақ және жатар орынды Ұста берді, алғыс ретінде Қалтабай оның үй шаруасын реттеп отырды. 
+      Көп ұзамай Қалтабай өз алғашқы еңбегінің нәтижесін көрді — ол алғашқы тапсырысы үшін 50 теңге алды!
+      Бұл оның ұсталық жолындағы алғашқы табысы.
+    </p>
+    <div class="button">
+      <button onclick="window.location.href='scene4.html'">Келесі</button>
+      <button class="back-button" onclick="history.back()">← Артқа</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleInfo() {
+      const infoBox = document.getElementById("infoBox");
+      infoBox.style.display = infoBox.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

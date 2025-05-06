@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ұстахананы кеңейту</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('кузня.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.65);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 850px;
+      text-align: left;
+      backdrop-filter: blur(6px);
+      display: flex;
+      gap: 30px;
+    }
+
+    .text {
+      flex: 2;
+    }
+
+    .photo {
+      flex: 1;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      min-height: 300px;
+      background-size: cover;
+      background-position: center;
+      background-image: url('каз.png');
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .button {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    button {
+      background-color: #ffcc00;
+      color: #333;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ffe066;
+    }
+
+    .back-button {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    .back-button:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+
+    .tooltip-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 32px;
+      height: 32px;
+      background-color: #ffcc00;
+      color: #000;
+      border-radius: 50%;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .tooltip-text {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      color: #000;
+      padding: 15px;
+      border-radius: 10px;
+      width: 280px;
+      font-size: 14px;
+      display: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 9999;
+    }
+
+    .tooltip-icon:hover + .tooltip-text {
+      display: block;
+    }
+
+    .home-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #000000;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.2em;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s;
+      z-index: 999;
+    }
+
+    .home-button:hover {
+      background-color: #a17d50;
+    }
+
+    /* Адаптация под мобильные устройства */
+    @media screen and (max-width: 768px) {
+      body {
+        flex-direction: column;
+        overflow: auto;
+        padding: 20px 10px;
+        height: auto;
+      }
+
+      .overlay {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        max-width: 95%;
+      }
+
+      .text, .photo {
+        flex: unset;
+        width: 100%;
+      }
+
+      .photo {
+        min-height: 200px;
+        border-radius: 10px;
+      }
+
+      h1 {
+        font-size: 22px;
+        text-align: center;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .tooltip-icon {
+        top: 10px;
+        right: 10px;
+        width: 28px;
+        height: 28px;
+      }
+
+      .tooltip-text {
+        top: 50px;
+        right: 10px;
+        width: 90%;
+        font-size: 13px;
+      }
+
+      .home-button {
+        top: 10px;
+        left: 10px;
+        padding: 10px 18px;
+        font-size: 1em;
+      }
+
+      .button {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      button {
+        width: 100%;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button onclick="window.location.href='index.html'" class="home-button">
+    🏠 Үй
+  </button>
+  <div class="tooltip-icon">!</div>
+  <div class="tooltip-text">
+    <b>Кәсіпті масштабтау — байлыққа бастайтын жол!</b><br><br>
+    Бір ғана табыс көзіне сенбе, оны көбейтіп, адамдарға көмек арқылы кеңейту — нағыз кәсіпкердің жолы.
+  </div>
+
+  <div class="overlay">
+    <div class="text">
+      <h1>Қалтабайдың ұстаханасы кеңейді</h1>
+      <p>
+        Алаяқтардан кейін Қалтабай сабақ алды. Ол сенімділікпен жұмысын жалғастырып, шеберлігін дамытты.<br><br>
+        Бірнеше көмекші жалдап, өз ұстаханасын ашты. Жақсы құралдар, тәртіп пен адалдық — оның табыс кілті болды.<br><br>
+        Уақыт өте келе тапсырыс көбейді, Қалтабай бай әрі құрметті шеберге айналды. Енді оның өз үйі, мүлкі, тіпті шәкірттері бар еді.<br><br>
+        Қалтабай өз арманына жетті — байлық пен даналықты біріктіре білді.
+      </p>
+      <div class="button">
+        <button onclick="window.location.href='scene8.html'">Келесі қадамға өту</button>
+        <button class="back-button" onclick="history.back()">← Артқа</button>
+      </div>
+    </div>
+    <div class="photo"></div>
+  </div>
+</body>
+</html>

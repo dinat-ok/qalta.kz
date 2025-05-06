@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Алаяқтармен кездесу</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('мошейник.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.65);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 800px;
+      text-align: center;
+      backdrop-filter: blur(6px);
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .button {
+      margin-top: 30px;
+    }
+
+    button {
+      background-color: #ffcc00;
+      color: #333;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ffe066;
+    }
+
+    .back-button {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      margin-left: 10px;
+    }
+
+    .back-button:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+
+    /* Подсказка */
+    .tooltip-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 32px;
+      height: 32px;
+      background-color: #ffcc00;
+      color: #000;
+      border-radius: 50%;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1000; /* Задаём высокий z-index для подсказки */
+    }
+
+    .tooltip-text {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      color: #000;
+      padding: 15px;
+      border-radius: 10px;
+      width: 280px;
+      font-size: 14px;
+      display: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 9999; /* Обеспечиваем, чтобы подсказка была поверх всех элементов */
+    }
+
+    .tooltip-icon:hover + .tooltip-text {
+      display: block;
+    }
+
+    .home-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #000000;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.2em;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s;
+      z-index: 999;
+    }
+
+    .home-button:hover {
+      background-color: #a17d50;
+    }
+
+    @media screen and (max-width: 768px) {
+      body {
+        padding-top: 20px;
+        height: auto;
+        overflow: visible;
+      }
+
+      .overlay {
+        padding: 20px;
+        max-width: 90%;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .button button {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+
+      .back-button {
+        padding: 10px 20px;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+
+      .tooltip-icon {
+        top: 10px;
+        right: 10px;
+        width: 28px;
+        height: 28px;
+      }
+
+      .tooltip-text {
+        width: 220px;
+        font-size: 12px;
+        top: 50px;
+      }
+
+      .home-button {
+        top: 10px;
+        left: 10px;
+        font-size: 1em;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button onclick="window.location.href='index.html'" class="home-button">
+    🏠 Үй
+  </button>
+  <div class="tooltip-icon">!</div>
+  <div class="tooltip-text">
+    Егер біреу "тез баюдың жолын" ұсынса — абай бол!<br><br>
+    Алаяқтар сенің сеніміңді пайдаланып, ақшаңнан айырады.<br><br>
+    <b>Қаржылық шешімдерге логикамен кел!</b>
+  </div>
+
+  <div class="overlay">
+    <h1>Алаяқтармен кездесу</h1>
+    <p>
+      Бір күні базарда жүрген Қалтабай екі жігітпен танысты. Олар былай деді:<br><br>
+      <i>– Бізде керемет жоба бар! Аз уақыт ішінде 2 есе табыс табасың!</i><br><br>
+      Қалтабай ойланып, жинаған ақшасын берді... Бірақ бірнеше күннен соң жігіттер жоғалып кетті.<br><br>
+      Қалтабай алғаш рет алданып қалды.<br><br>
+      Бұл оның үлкен сабағы болды: <b>ақшаңды қайда жұмсайтыныңды ойланып шешу керек!</b>
+    </p>
+
+    <div class="button">
+      <button onclick="window.location.href='scene7.html'">Келесі қадамға өту</button>
+      <button class="back-button" onclick="history.back()">← Артқа</button>
+    </div>
+  </div>
+</body>
+</html>

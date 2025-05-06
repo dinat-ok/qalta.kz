@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <title>Қалтабаймен танысу</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url("yurt.jpg");
+      background-size: cover;
+      background-position: center;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      backdrop-filter: brightness(0.7);
+    }
+
+    .scene-box {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 900px;
+      width: 90%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.7);
+      gap: 20px;
+    }
+
+    .text-box {
+      flex: 1 1 300px;
+      min-width: 250px;
+    }
+
+    .text-box h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .text-box p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .character-image {
+      width: 200px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.7);
+    }
+
+    .next-button, .back-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .next-button {
+      background-color: #ffd700;
+      border: none;
+      color: black;
+    }
+
+    .next-button:hover {
+      background-color: #e0c200;
+    }
+
+    .back-button {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      margin-right: 10px;
+    }
+
+    .back-button:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+
+    .home-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+  z-index: 999;
+}
+
+.home-button:hover {
+  background-color: #a17d50;
+}
+
+@media (max-width: 768px) {
+  .home-button {
+    left: 50%; /* Центрируем кнопку */
+    transform: translateX(-50%); /* Смещаем на 50% влево для идеального центрирования */
+    top: 10px; /* Небольшой отступ сверху */
+  }
+}
+
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .scene-box {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .text-box h1 {
+        font-size: 22px;
+      }
+
+      .text-box p {
+        font-size: 16px;
+      }
+
+      .next-button, .back-button {
+        font-size: 15px;
+        padding: 10px 16px;
+      }
+
+      .character-image {
+        width: 160px;
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button onclick="window.location.href='index.html'" class="home-button">🏠 Үй</button>
+
+  <div class="scene-box">
+    <div class="text-box">
+      <h1>Таныс бол, Қалтабай!</h1>
+      <p>
+        Бұл — Қалтабай.<br>
+        Ол 25 жаста. Қарапайым отбасында дүниеге келген, қазір жалғыз тұрады.<br>
+        Әкесінен қалған 2 қойы бар, малшы болып жұмыс істеп айына 30 теңге табады.<br>
+        Қалтабайдың арманы — ол бай болғысы келеді!<br>
+        Ол өзінің қаржылық сауаттылығын арттыру үшін сапарға аттануға дайын.
+      </p>
+      <button class="back-button" onclick="history.back()">← Артқа</button>
+      <button class="next-button" onclick="window.location.href='scene2.html'">Жалғастыру →</button>
+    </div>
+
+    <img class="character-image" src="kaz.jpg" alt="Қалтабай">
+  </div>
+</body>
+</html>

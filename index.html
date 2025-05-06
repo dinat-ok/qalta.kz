@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Қалтабайдың Байлық Сапары</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Стили бокового меню */
+    #sidebar {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      z-index: 999;
+    }
+
+    .toggle-btn {
+      background-color: #ffcc00;
+      color: #000;
+      border: none;
+      padding: 10px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .menu {
+  background-color: rgba(20, 20, 20, 0.85); /* Тёмный, но не полностью чёрный */
+  backdrop-filter: blur(6px);               /* Эффект размытия фона */
+  padding: 15px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 0 12px 12px 0;
+  width: 230px;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.4); /* Тень справа */
+  border-right: 1px solid rgba(255, 255, 255, 0.1); /* Лёгкая граница */
+}
+
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
+    }
+
+    .show {
+      display: flex !important;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <button id="menuToggle" onclick="toggleSidebar()">
+    <i id="menuIcon" class="fas fa-bars"></i> Сюжет
+  </button>
+  
+  <div id="sidebar">
+    <div class="menu">
+      <a href="scene1.html">1. Қалтабаймен танысу</a>
+      <a href="scene2.html">2. Базардағы таңдау</a>
+      <a href="scene3.html">3. Ұста шәкірті болу</a>
+      <a href="scene4.html">4. Бюджетті бөлу</a>
+      <a href="scene5.html">5. Қазынашының кеңесі</a>
+      <a href="scene6.html">6. Бай болу жолы</a>
+      <a href="scene7.html">7. Тест</a>
+      <a href="kaltabai_today.html">8. Қалтабайдың ұрпағы</a>
+    </div>
+  </div>
+  
+
+  <!-- Основной контент -->
+  <div class="hero">
+    <div class="overlay">
+      <h1>Қалтабай бай болғысы келеді</h1>
+      <p>Сен оған көмектесе аласың ба?</p>
+      <button class="start-button" onclick="window.location.href='scene1.html'">Бастау</button>
+    </div>
+  </div>
+
+  <!-- Кнопка и инфобокс -->
+  <div class="info-button" onclick="toggleInfo()">!</div>
+  <div class="info-box" id="infoBox">
+    <h3>Ойын туралы</h3>
+    <p>Бұл ойын – Қалтабай есімді кейіпкермен бірге қаржылық сауаттылықты үйренуге арналған.</p>
+    <p>Кеттік бастаймыз – бай болуға дейінгі жолың осы жерден басталады!</p>
+  </div>
+
+  <!-- Подвал -->
+  <footer class="contacts">
+    <a href="https://t.me/qalta_robot" target="_blank">Telegram</a> |
+    <a href="https://instagram.com/qalta.bot" target="_blank">Instagram</a>
+  </footer>
+
+  <!-- Скрипты -->
+  <script src="script.js"></script>
+  <script>
+    function toggleSidebar() {
+      document.querySelector('.menu').classList.toggle('show');
+    }
+
+    function toggleInfo() {
+      document.getElementById('infoBox').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Қалтабайдың ұрпағы</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: url('фото.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .header a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .header a:hover {
+      opacity: 0.8;
+    }
+
+    .logo-img {
+      height: 48px;
+      vertical-align: middle;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 120px auto 40px;
+      text-align: center;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+    }
+
+    h1 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.7;
+      color: #ddd;
+      margin-bottom: 40px;
+    }
+
+    .telegram-button {
+      display: inline-block;
+      padding: 14px 28px;
+      font-size: 18px;
+      background-color: #ffcc00;
+      color: #000;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .telegram-button:hover {
+      background-color: #ffe066;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #bbb;
+      margin-top: 60px;
+      padding-bottom: 20px;
+    }
+
+    /* Мобильная адаптация */
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+      }
+
+      .header a {
+        font-size: 16px;
+      }
+
+      .logo-img {
+        height: 40px;
+      }
+
+      .container {
+        margin: 60px 10px 20px;
+        padding: 20px;
+        border-radius: 15px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .telegram-button {
+        font-size: 16px;
+        padding: 12px 20px;
+      }
+
+      footer {
+        font-size: 12px;
+        margin-top: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <a href="index.html">🏠 Басты бет</a>
+    <a href="https://t.me/qalta_robot" target="_blank">
+      <img src="бот.jpg" alt="Telegram Bot" class="logo-img" />
+    </a>
+  </div>
+
+  <div class="container">
+    <h1>Қалтабайдың 10-буын ұрпағы</h1>
+    <p>
+      Қалтабай байлық пен білімге жол салды. <br>
+      Бүгін оның ұрпақтары қаржыларын цифрлы түрде басқарады.<br><br>
+      Сен де қаржылық еркіндікке қадам бас! Telegram-бот арқылы өз табысыңды бақыла.
+    </p>
+    <a class="telegram-button" href="https://t.me/qalta_robot" target="_blank">
+      Telegram-ботқа қосылу
+    </a>
+  </div>
+
+  <footer>
+    © 2025 Қалтасапар | Барлық құқықтар қорғалған
+  </footer>
+</body>
+</html>

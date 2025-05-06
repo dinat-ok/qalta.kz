@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Қалтабай — Таңдау</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('step.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 700px;
+      text-align: center;
+      backdrop-filter: blur(6px);
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .button {
+      margin-top: 30px;
+    }
+
+    button {
+      background-color: #ccc;
+      color: #333;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Өмір жалғасуда...</h1>
+    <p>
+      Қалтабай бұрынғыдай мал бағып жүре берді. Ай сайынғы 30 теңге жетпей, кейде аш, кейде тоқ өмір сүрді.<br>
+      Ол ұста болуға мүмкіндік болғанын есіне алып, кейде өкініп қоятын...<br>
+      Бірақ ол — өз таңдауын өзі жасады.
+    </p>
+    <div class="button">
+      <button onclick="window.location.href='index.html'">Басты бетке оралу</button>
+    </div>
+  </div>
+</body>
+</html>

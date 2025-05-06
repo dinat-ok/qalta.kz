@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="kk">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Қалтабай — Базарда</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('bazar.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      position: relative;
+      min-height: 100vh;
+overflow-y: auto;
+
+    }
+
+    .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+    .scene-container {
+      background-color: rgba(255, 255, 255, 0.08);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 700px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+      position: relative;
+      z-index: 1; /* поднимаем над затемнением */
+      max-width: 700px;
+  width: 100%;
+  margin: auto;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .choice-buttons {
+      margin-top: 30px;
+    }
+
+    button {
+      background-color: #ffcc00;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 10px;
+      margin: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ffe066;
+    }
+
+    .back-button {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    .back-button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .character-left,
+.character-right {
+  position: absolute;
+  bottom: 0;
+  height: auto;
+  width: 180px;
+  z-index: 1;
+}
+
+@media (min-width: 1200px) {
+  .character-left,
+  .character-right {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .character-left,
+  .character-right {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-button {
+    display: none;
+  }
+}
+
+
+    .character-left {
+      left: 30px;
+    }
+
+    .character-right {
+      right: 30px;
+    }
+
+    @media (max-width: 768px) {
+
+      .character-left,
+      .character-right {
+        display: none;
+      }
+
+      .scene-container {
+        padding: 20px;
+      }
+    }
+
+    .home-button {
+      position: fixed;
+      /* Кнопка будет фиксирована на экране */
+      top: 20px;
+      /* Отступ сверху */
+      left: 20px;
+      /* Отступ слева */
+      background-color: #000000;
+      /* Цвет фона */
+      color: white;
+      /* Цвет текста */
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.2em;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s;
+      z-index: 999;
+    }
+
+    .home-button:hover {
+      background-color: #a17d50;
+      /* Цвет фона при наведении */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Кнопка "Домой" -->
+<button onclick="window.location.href='index.html'" class="home-button">
+  🏠 Үй
+</button>
+
+  <!-- Персонажи -->
+  <img src="kaltabaybazar.png" alt="Қалтабай" class="character-left" />
+  <img src="usta.png" alt="Ұста" class="character-right" />
+
+  <div class="overlay">
+    <div class="scene-container">
+      <h1>Базарда</h1>
+      <p>
+        Қалтабай ауыл базарына келді. Айналада саудагерлер, малшылар, қолөнершілер.<br>
+        Бір шетте ұста темір соғып жатыр екен. Ол бүкіл қазақ даласына танымал қолөнерші еді және ол небәрі 20 теңгеге
+        шәкірт алып ұсталықты үйрететін .<br>
+        Қалтабай ойланып қалды: малшы болып аз ақша таба берейін бе , әлде жаңа кәсіп үйренейін бе?
+      </p>
+
+      <div class="choice-buttons">
+        <button onclick="window.location.href='scene3.html'">Ұста болуды үйрену</button>
+        <button onclick="window.location.href='scene3_fail.html'">Малшы болып қалу</button>
+        <button class="back-button" onclick="history.back()">← Артқа</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
